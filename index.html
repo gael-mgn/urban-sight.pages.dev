@@ -83,30 +83,30 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
   cursor: none;
 }
   :root{
-    --bg:#071022;
-    --panel:#0b1220;
-    --accent:#22c1c3;
-    --muted:#94a3b8;
+    --bg:#f4f6f8;
+    --panel:#ffffff;
+    --accent:#0e8f91;
+    --muted:#5b6b7c;
   }
   a {
     color: var(--accent);
   }
-  html,body{height:100%;margin:0;background:var(--bg);color:#e6eef6;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+  html,body{height:100%;margin:0;background:var(--bg);color:#1e293b;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
   .container{display:flex;gap:12px;height:100%;padding:12px;box-sizing:border-box}
-  #canvasWrap{flex:1;border-radius:10px;background:linear-gradient(180deg,#071022,#05111b);box-shadow:0 8px 30px rgba(2,6,23,0.6);position:relative;overflow:hidden}
+  #canvasWrap{flex:1;border-radius:10px;background:linear-gradient(180deg,#ffffff,#eef2f5);box-shadow:0 8px 30px rgba(15,23,42,0.12);position:relative;overflow:hidden;border:1px solid rgba(15,23,42,0.06)}
   canvas{width:100%;height:100%;display:block;touch-action: none} /* prevent default gestures */
-  .panel{width:360px;background:var(--panel);border-radius:10px;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px}
+  .panel{width:360px;background:var(--panel);border:1px solid rgba(15,23,42,0.08);border-radius:10px;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px}
   h1{margin:0;font-size:20px}
   h2{font-size:16px}
   .controls{display:flex;flex-direction:column;gap:8px}
   label{font-size:13px;color:var(--muted)}
   input[type="range"]{width:100%}
-  button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:var(--accent);cursor:pointer}
+  button{background:#ffffff;border:1px solid rgba(15,23,42,0.12);padding:8px;border-radius:8px;color:var(--accent);cursor:pointer}
   .small{font-size:13px;color:var(--muted)}
   .footer{margin-top:auto;font-size:12px;color:var(--muted)}
-  .status{font-size:13px;color:var(--muted);padding:8px;border-radius:8px;background:rgba(255,255,255,0.02)}
-  .danger{color:#ff7b7b}
-  .success{color:#7bffdf}
+  .status{font-size:13px;color:var(--muted);padding:8px;border-radius:8px;background:rgba(15,23,42,0.04)}
+  .danger{color:#dc2626}
+  .success{color:#0f9d68}
 
   /* search bar overlay (ajoute au style existant) */
 #canvasWrap { position: relative; } /* déjà nécessaire pour position absolute */
@@ -118,26 +118,26 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
   display:flex;
   gap:8px;
   align-items:center;
-  background: rgba(11,18,32,0.88);
+  background: rgba(255,255,255,0.92);
   padding:6px 10px;
   border-radius:10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.18);
   z-index: 50;
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,0.04);
+  border: 1px solid rgba(15,23,42,0.08);
 }
 .searchBar input{
   width:360px;
   max-width: calc(100vw - 160px);
   padding:8px 10px;
   border-radius:8px;
-  border:1px solid rgba(255,255,255,0.04);
-  background: rgba(255,255,255,0.02);
-  color: #e6eef6;
+  border:1px solid rgba(15,23,42,0.12);
+  background: #ffffff;
+  color: #1e293b;
   font-size:14px;
   outline: none;
 }
-.searchBar input::placeholder{ color: rgba(230,238,246,0.45); }
+.searchBar input::placeholder{ color: rgba(30,41,59,0.45); }
 .searchBar button{
   padding:8px 10px;
   border-radius:8px;
@@ -168,7 +168,7 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(2,6,12,0.6);
+  background: rgba(244,246,248,0.75);
   z-index: 60;
   pointer-events: auto;
   transition: opacity 220ms ease, visibility 220ms ease;
@@ -188,11 +188,11 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
   display:flex;
   gap:12px;
   align-items:center;
-  background: rgba(11,18,32,0.95);
+  background: rgba(255,255,255,0.97);
   padding: 12px 16px;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.18);
+  border: 1px solid rgba(15,23,42,0.08);
 }
 
 /* spinner */
@@ -200,7 +200,7 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
   width:34px;
   height:34px;
   border-radius:50%;
-  border:4px solid rgba(255,255,255,0.08);
+  border:4px solid rgba(15,23,42,0.1);
   border-top-color: var(--accent);
   animation: loader-rot 1s linear infinite;
   box-sizing:border-box;
@@ -212,7 +212,7 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
 
 .loader-text{
   font-size:14px;
-  color: #e6eef6;
+  color: #1e293b;
   min-width:160px;
 }
 
@@ -240,15 +240,14 @@ const WHEEL_IDLE_DELAY_MS = 520; // ajuste (200-300ms couramment)
   right:6px;
   bottom:4px;
   font-size:11px;
-  color:rgba(255,255,255,0.6);
-  background:rgba(0,0,0,0.35);
+  color:rgba(30,41,59,0.75);
+  background:rgba(255,255,255,0.75);
   padding:2px 6px;
   border-radius:4px;
   pointer-events:auto;
   z-index:10;
 ">
-  © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" style="color:inherit">OpenStreetMap</a> contributors ©
-  <a href="https://carto.com/attributions" target="_blank" rel="noopener" style="color:inherit">CARTO</a> - Leaflet
+  © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" style="color:inherit">OpenStreetMap</a> contributors
 </div>
   </div>
 
@@ -510,7 +509,7 @@ function renderBuildingsToOffscreen(){
   // outlines si voulu (faible coût ici car offscreen)
   if(showPolygonsOutline){
     osctx.lineWidth = 0.9;
-    osctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    osctx.strokeStyle = 'rgba(15,23,42,0.15)';
     for(const poly of projectedBuildings){
       osctx.beginPath();
       for(let i=0;i<poly.length;i++){
@@ -937,7 +936,7 @@ function computeIsovist(origin, numRays, maxDist){
 }
 
 /* --------------------
-   Tile background (OpenStreetMap / Carto dark)
+   Tile background (OpenStreetMap - thème clair, sans clé API)
 -------------------- */
 const tileSize = 256; // tile pixel size (CSS px)
 const initialResolution = 2 * Math.PI * R / tileSize; // meters per pixel at zoom 0
@@ -1101,7 +1100,8 @@ function drawTiles(){
   for(let tx = txMin; tx <= txMax; tx++){
     for(let ty = tyMin; ty <= tyMax; ty++){
       const wrapX = ((tx % Math.pow(2,z)) + Math.pow(2,z)) % Math.pow(2,z);
-      const url = `https://a.basemaps.cartocdn.com/dark_all/${z}/${wrapX}/${ty}.png`;
+      // Tuiles OpenStreetMap standard (raster, thème clair) — aucune clé API nécessaire
+      const url = `https://tile.openstreetmap.org/${z}/${wrapX}/${ty}.png`;
       const tlLon = tileXToLon(tx, z);
       const tlLat = tileYToLat(ty, z);
       const brLon = tileXToLon(tx + 1, z);
@@ -1114,7 +1114,7 @@ function drawTiles(){
       const dw = brP.x - tlP.x;
       const dh = brP.y - tlP.y;
 
-      ctx.fillStyle = 'rgba(4,10,16,1)';
+      ctx.fillStyle = 'rgba(226,230,235,1)';
       ctx.fillRect(dx, dy, dw, dh);
 
       const cacheKey = url;
@@ -1140,7 +1140,7 @@ function drawTiles(){
 -------------------- */
 function clear(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = '#05111b';
+  ctx.fillStyle = '#eef2f5';
   ctx.fillRect(0,0,canvas.width,canvas.height);
 }
 function drawGrid(){
@@ -1148,7 +1148,7 @@ function drawGrid(){
   const step = 100;
   ctx.save();
   ctx.scale(DPR, DPR);
-  ctx.strokeStyle = 'rgba(255,255,255,0.02)';
+  ctx.strokeStyle = 'rgba(15,23,42,0.045)';
   ctx.lineWidth = 1;
   for(let x=0;x<=W;x+=step){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
   for(let y=0;y<=H;y+=step){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
@@ -1272,7 +1272,7 @@ g.addColorStop(0, 'rgba(255,0,0,0)');
 
   if(showRays){
     ctx.lineWidth = 0.35;
-    ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+    ctx.strokeStyle = 'rgba(30,41,59,0.35)';
     ctx.beginPath();
     for(const p of isoPts){ ctx.moveTo(observer.x, observer.y); ctx.lineTo(p.x, p.y); }
     ctx.stroke();
@@ -1283,11 +1283,11 @@ g.addColorStop(0, 'rgba(255,0,0,0)');
 
 // draw observer
 ctx.beginPath();
-ctx.fillStyle = '#fff';
+ctx.fillStyle = '#1e293b';
 ctx.arc(observer.x, observer.y, 4, 0, Math.PI*2);
 ctx.fill();
 ctx.beginPath();
-ctx.strokeStyle = '#0b1220';
+ctx.strokeStyle = '#ffffff';
 ctx.lineWidth = 2;
 ctx.arc(observer.x, observer.y, 6, 0, Math.PI*2);
 ctx.stroke();
